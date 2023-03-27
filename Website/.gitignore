@@ -1,3 +1,4 @@
 client/node_modules
 /node_modules
 config/dev_keys.js
+.env
