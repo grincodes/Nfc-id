@@ -1,5 +1,5 @@
 const moment = require("moment");
-
+const cors = require('cors');
 var express = require("express"),
      app= express(),
      auth = require("./Routes/Auth/auth"),
@@ -18,6 +18,11 @@ app.use(bodyParser.json());
 //Passport Middleware
 app.use(passport.initialize());
 
+
+app.use(cors({
+    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
+    origin: '*'
+}));
     
 //Passport Config
 require("./config/passport")(passport);

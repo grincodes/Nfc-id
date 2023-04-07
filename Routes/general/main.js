@@ -248,7 +248,7 @@ const FindActiveLecture = async (timestamp) => {
  
 }
 
-const RegisterAttendance= async (user , lecture , cardid) => {
+const Attendance= async (user , lecture , cardid) => {
   return new Promise((async (resolve , reject ) => {
     try{
       console.log(user)
